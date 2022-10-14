@@ -23,6 +23,7 @@ lint:
 
 report:
 	./gradlew jacocoTestReport
+
 wrapper:
 	./gradlew wrapper
 

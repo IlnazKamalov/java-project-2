@@ -1,9 +1,8 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/IlnazKamalov/java-project-71/workflows/hexlet-check/badge.svg)](https://github.com/IlnazKamalov/java-project-71/actions)
-[![Java CI](https://github.com/IlnazKamalov/java-project-71/actions/workflows/github-actions.yml/badge.svg)](https://github.com/IlnazKamalov/java-project-71/actions/workflows/github-actions.yml)
-<a href="https://codeclimate.com/github/IlnazKamalov/java-project-71/maintainability"><img src="https://api.codeclimate.com/v1/badges/c6c5b2918dc36c45419f/maintainability" /></a>
-<a href="https://codeclimate.com/github/IlnazKamalov/java-project-71/test_coverage"><img src="https://api.codeclimate.com/v1/badges/c6c5b2918dc36c45419f/test_coverage" /></a>
-
+[![Java CI](https://github.com/IlnazKamalov/project-2/actions/workflows/github-actions.yml/badge.svg)](https://github.com/IlnazKamalov/project-2/actions/workflows/github-actions.yml)
+<a href="https://codeclimate.com/github/IlnazKamalov/project-2/maintainability"><img src="https://api.codeclimate.com/v1/badges/68e6ad602aa1c36d31fa/maintainability" /></a>
+<a href="https://codeclimate.com/github/IlnazKamalov/project-2/test_coverage"><img src="https://api.codeclimate.com/v1/badges/68e6ad602aa1c36d31fa/test_coverage" /></a>
 
 Hi.
 

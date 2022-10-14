@@ -1,3 +1,9 @@
-/build/
-/.gradle/
-/.idea/
+build
+.gradle
+**/logs/
+
+.settings
+bin
+.project*
+.classpath
+.idea/

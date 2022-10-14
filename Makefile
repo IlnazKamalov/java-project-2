@@ -9,7 +9,7 @@ install:
 	make -C app clean install
 
 run-dist:
-	./build/install/app/bin/app
+	make -C app run-dist
 
 run:
 	make -C app clean
@@ -19,10 +19,10 @@ test:
 	make -C app test
 
 lint:
-	make -C app checkstyleMain checkstyleTest
+	make -C app lint
 
 report:
-	make -C app jacocoTestReport
+	make -C app report
 
 wrapper:
 	make -C app wrapper

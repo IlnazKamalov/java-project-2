@@ -1,2 +1,22 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/IlnazKamalov/java-project-71/workflows/hexlet-check/badge.svg)](https://github.com/IlnazKamalov/java-project-71/actions)
+[![Java CI](https://github.com/IlnazKamalov/app/actions/workflows/github-actions.yml/badge.svg)](https://github.com/IlnazKamalov/app/actions/workflows/github-actions.yml)
+<a href="https://codeclimate.com/github/IlnazKamalov/java-project-71/maintainability"><img src="https://api.codeclimate.com/v1/badges/c6c5b2918dc36c45419f/maintainability" /></a>
+<a href="https://codeclimate.com/github/IlnazKamalov/java-project-71/test_coverage"><img src="https://api.codeclimate.com/v1/badges/c6c5b2918dc36c45419f/test_coverage" /></a>
+
+
+Hi.
+
+Difference calculator is a program that perceives the difference between two data structures.
+Utility features:
+
+    Support for different input formats: yaml, json
+    Report generation in the form of plain text, stylish and json
+Json:
+https://asciinema.org/a/KR2wCxHXuL636H1pyjqwQsmEJ
+
+YAMl to Plain:
+https://asciinema.org/a/6yGLch3HZqLA7cGymj9z1ZGRv
+
+Json to Json:
+https://asciinema.org/a/JR4HgIjrJxAt7FiJX

@@ -8,7 +8,7 @@ import picocli.CommandLine.Parameters;
 
 import java.util.concurrent.Callable;
 
-@Command(name = "getDiff", mixinStandardHelpOptions = true, version = "getDiff 1.0",
+@Command(name = "getDiff", mixinStandardHelpOptions = true, version = "getDiff 1.1",
         description = "Compares two configuration files and shows a difference.")
 
 public class  App implements Callable<String> {

@@ -32,15 +32,20 @@ dependencies {
 }
 
 test {
-    useJUnitPlatform()
     finalizedBy jacocoTestReport
+    useJUnitPlatform()
+}
+
+jacoco {
+    toolVersion = "0.8.8"
+    reportsDirectory = layout.buildDirectory.dir('customJacocoReportDir')
 }
 
 jacocoTestReport {
     reports {
-        xml.enabled = true
-        html.enabled = true
-        csv.enabled = true
+        xml.required = false
+        csv.required = false
+        html.outputLocation = layout.buildDirectory.dir('jacocoHtml')
     }
 }
 

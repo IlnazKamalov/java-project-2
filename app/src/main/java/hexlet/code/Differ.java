@@ -10,7 +10,7 @@ public class Differ {
     public static String generate(String filepath1, String filepath2, String format) throws Exception {
         Map<String, Object> firstFileToMap = getData(filepath1);
         Map<String, Object> secondFileToMap = getData(filepath2);
-        List<Tree> diffTree = Tree.buildDiff(firstFileToMap, secondFileToMap);
+        List<Tree> diffTree = Node.buildDiff(firstFileToMap, secondFileToMap);
         return Formatter.format(diffTree, format);
     }
 

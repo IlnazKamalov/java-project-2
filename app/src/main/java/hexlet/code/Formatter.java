@@ -7,7 +7,7 @@ import hexlet.code.formatters.Stylish;
 import java.util.List;
 
 public class Formatter {
-    public static String format(List<Tree> diffTree, String formatFrom) throws Exception {
+    public static String format(List<Node> diffTree, String formatFrom) throws Exception {
         switch (formatFrom) {
             case "plain":
                 return Plain.plainFormatter(diffTree);

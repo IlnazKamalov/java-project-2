@@ -1,16 +1,16 @@
 package hexlet.code.formatters;
 
-import hexlet.code.Tree;
+import hexlet.code.Node;
 
 import java.util.List;
 
 public class Stylish {
 
-    public static String stylishFormatter(List<Tree> diffTree) {
+    public static String stylishFormatter(List<Node> diffTree) {
         StringBuilder diffBuilder = new StringBuilder("{\n");
         String space = " ";
 
-        for (Tree pair : diffTree) {
+        for (Node pair : diffTree) {
             String key = pair.getKey();
             Object startingValue = pair.getStartingValue();
             Object finalValue = pair.getFinalValue();

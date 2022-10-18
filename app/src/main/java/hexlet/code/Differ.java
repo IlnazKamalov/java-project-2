@@ -5,12 +5,14 @@ import java.nio.file.Paths;
 import java.util.Map;
 import java.util.List;
 
+import static hexlet.code.DiffBuilder.buildDiff;
+
 public class Differ {
 
     public static String generate(String filepath1, String filepath2, String format) throws Exception {
         Map<String, Object> firstFileToMap = getData(filepath1);
         Map<String, Object> secondFileToMap = getData(filepath2);
-        List<Tree> diffTree = Node.buildDiff(firstFileToMap, secondFileToMap);
+        List<Node> diffTree = buildDiff(firstFileToMap, secondFileToMap);
         return Formatter.format(diffTree, format);
     }
 

@@ -1,14 +1,14 @@
 package hexlet.code.formatters;
 
-import hexlet.code.Tree;
+import hexlet.code.Node;
 import java.util.List;
 
 public class Plain {
 
-    public static String plainFormatter(List<Tree> diffTree) {
+    public static String plainFormatter(List<Node> diffTree) {
         StringBuilder diffBuilder = new StringBuilder();
 
-        for (Tree pair : diffTree) {
+        for (Node pair : diffTree) {
             String key = pair.getKey();
             Object sValue = pair.getStartingValue();
             Object fValue = pair.getFinalValue();

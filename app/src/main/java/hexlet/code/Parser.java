@@ -7,15 +7,15 @@ import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import java.util.Map;
 
 public class Parser {
-    public static Map<String, Object> parse(String content, String formatType) throws Exception {
+    public static Map<String, Object> parse(/*String content, */String formatType) throws Exception {
         ObjectMapper objectMapper;
 
-        if (formatType.contains("json")) {
+        if (formatType.equalsIgnoreCase("json")) {
             objectMapper = new ObjectMapper();
         } else {
             objectMapper = new ObjectMapper(new YAMLFactory());
         }
-        return objectMapper.readValue(content, new TypeReference<>() {
+        return objectMapper.readValue(/*content,*/ formatType, new TypeReference<>() {
         });
     }
 }

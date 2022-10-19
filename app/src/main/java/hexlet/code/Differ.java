@@ -4,6 +4,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Map;
 import java.util.List;
+import java.util.Objects;
+import java.util.Optional;
 
 import static hexlet.code.DiffBuilder.buildDiff;
 
@@ -25,7 +27,10 @@ public class Differ {
     }
 
     public static Map<String, Object> getData(String filepath) throws Exception {
+        Optional.ofNullable(filepath)
+                    .filter(f -> f.contains("."))
+                    .map(f -> f.substring(filepath.lastIndexOf(".") + 1));
         String stringFromFile = stringFile(filepath);
-        return Parser.parse(stringFromFile, filepath);
+        return Parser.parse(Objects.requireNonNull(stringFromFile));
     }
 }

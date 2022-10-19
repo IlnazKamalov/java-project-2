@@ -10,7 +10,7 @@ public class Parser {
     public static Map<String, Object> parse(String content, String formatType) throws Exception {
         ObjectMapper objectMapper;
 
-        if (formatType.contains(".json")) {
+        if (formatType.contains("json")) {
             objectMapper = new ObjectMapper();
         } else {
             objectMapper = new ObjectMapper(new YAMLFactory());

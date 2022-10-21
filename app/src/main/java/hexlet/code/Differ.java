@@ -4,10 +4,10 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Map;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 
 import static hexlet.code.DiffBuilder.buildDiff;
+import static hexlet.code.Parser.parse;
 
 public class Differ {
 
@@ -26,11 +26,14 @@ public class Differ {
         return new String(Files.readAllBytes(Paths.get(filepath)));
     }
 
+    private static String getFormatFile(String formatType) {
+        return String.valueOf(Optional.ofNullable(formatType)
+                .filter(f -> f.contains("."))
+                .map(f -> f.substring(formatType.lastIndexOf(".") + 1)));
+    }
+
     public static Map<String, Object> getData(String filepath) throws Exception {
-        Optional.ofNullable(filepath)
-                    .filter(f -> f.contains("."))
-                    .map(f -> f.substring(filepath.lastIndexOf(".") + 1));
         String stringFromFile = stringFile(filepath);
-        return Parser.parse(Objects.requireNonNull(stringFromFile));
+        return parse(stringFromFile, getFormatFile(filepath));
     }
 }

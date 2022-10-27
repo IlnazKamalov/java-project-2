@@ -13,14 +13,14 @@ public class DifferTest {
     private final String filepath2Yaml = ("src/test/resources/file2.yml");
 
     @Test
-    public void generateStylishTestJson() throws Exception {
+    public void generateDefaultTestJson() throws Exception {
         String actual = Differ.generate(filepath1Json, filepath2Json);
         String expected = Files.readString(Paths.get("src/test/resources/stylish_JSON"));
         assertThat(actual).isEqualTo(expected);
     }
 
     @Test
-    public void generateTestStylishYAML() throws Exception {
+    public void generateTestDefaultYAML() throws Exception {
         String actual = Differ.generate(filepath1Yaml, filepath2Yaml);
         String expected = Files.readString(Paths.get("src/test/resources/stylish_YAML"));
         assertThat(actual).isEqualTo(expected);
@@ -46,6 +46,27 @@ public class DifferTest {
     public void generateTestJsonToJson() throws Exception {
         String actual = Differ.generate(filepath1Json, filepath2Json, "json");
         String expected = Files.readString(Paths.get("src/test/resources/json"));
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    @Test
+    public void generateTestYAMLtoJson() throws Exception {
+        String actual = Differ.generate(filepath1Yaml, filepath2Yaml, "json");
+        String expected = Files.readString(Paths.get("src/test/resources/YamlToJson"));
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    @Test
+    public void generateTestToStylishJson() throws Exception {
+        String actual = Differ.generate(filepath1Json, filepath2Json, "stylish");
+        String expected = Files.readString(Paths.get("src/test/resources/stylish_JSON"));
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    @Test
+    public void generateTestToStylishYaml() throws Exception {
+        String actual = Differ.generate(filepath1Yaml, filepath2Yaml, "stylish");
+        String expected = Files.readString(Paths.get("src/test/resources/stylish_YAML"));
         assertThat(actual).isEqualTo(expected);
     }
 }

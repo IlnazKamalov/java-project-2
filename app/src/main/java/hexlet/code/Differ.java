@@ -22,7 +22,7 @@ public class Differ {
         return generate(filepath1, filepath2, "stylish");
     }
 
-    private static String stringFile(String filepath) throws Exception {
+    private static String readFiles(String filepath) throws Exception {
         return new String(Files.readAllBytes(Paths.get(filepath)));
     }
 
@@ -33,7 +33,7 @@ public class Differ {
     }
 
     public static Map<String, Object> getData(String filepath) throws Exception {
-        String stringFromFile = stringFile(filepath);
+        String stringFromFile = readFiles(filepath);
         return parse(stringFromFile, getFormatFile(filepath));
     }
 }
